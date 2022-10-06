@@ -46,7 +46,6 @@ Step by step series of examples and explanations about how to get a development 
 
 ## Running the Project
 ```bash
-# Starts application against ITE
 $ npm start
 ```
 
