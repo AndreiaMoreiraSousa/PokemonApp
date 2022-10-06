@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { useHistory, useParams } from "react-router-dom";
 
+
+//Return all Information about one specific pokemon
 const Pokeinfo = () => {
     const params = useParams();
     const history = useHistory();
@@ -20,12 +22,15 @@ const Pokeinfo = () => {
 
     let favouritePokemonsArray = [];
 
+    //I had never worked with LocalStorage before. So I couldn't put more than 1 pokemon on the list. 
+    //I still tried to favouritePokemonsArray.push(), to the array but I couldn't
     const addPokemonToLocalStore = (pokemon) => {
         favouritePokemonsArray.push(pokemon);
         localStorage.setItem('favouritePokemons', JSON.stringify({favouritePokemonsArray}));
         }
      
 
+    //Function to change state of favourite checkbox and add pokemon to Local Storage.
       const handleChange = () => {
         setChecked(!checked);
         addPokemonToLocalStore(data);

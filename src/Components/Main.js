@@ -10,6 +10,7 @@ const Main=()=>{
     const [nextUrl,setNextUrl]=useState();
     const [prevUrl,setPrevUrl]=useState();
 
+    //Get all Pokemons
     const getPokemon=async(res)=>{
        res.map(async(item)=>{
           const result=await axios.get(item.url)
@@ -32,6 +33,7 @@ const Main=()=>{
     useEffect(()=>{
         pokeFun();
     },[url])
+
     return(
         <>
             <div className="container">
